@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+	
+    int num,sum=0;
+    scanf("%d", &num);
+if(num>=10000&&num<=99999){
+    while(num>0){
+        int rem=num%10;
+        sum=sum+rem;
+        num=num/10;
+        
+    }
+    printf("%d",sum);
+}
+    //Complete the code to calculate the sum of the five digits on n.
+    return 0;
+}
