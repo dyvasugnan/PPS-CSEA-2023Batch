@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int n,first_digit,second_digit,third_digit,fourth_digit,fifth_digit,sum=0,temp1,temp2,temp3;
+    scanf("%d", &n);
+    first_digit=n/10000;
+    temp1=n%10000;
+    second_digit=temp1/1000;
+    temp2=temp1%1000;
+    third_digit=temp2/100;
+    temp3=temp2%100;
+    fourth_digit=temp3/10;
+    fifth_digit=temp3%10;
+    sum=first_digit+second_digit+third_digit+fourth_digit+fifth_digit;
+    printf("%d",sum);
+    return 0;
+}
