@@ -1,13 +1,11 @@
-//sum of natural numbers less than 1000 which are either multiples of 3 or 5
 #include<stdio.h>
-  int main(){
-  	int num=1,sum=0;
-  	   for(num=1;num<1000;num++){
-		 
-  	       if(num%3==0 || num%5==0)
-  	          sum += num;
-  	    }
-  	printf("%d",sum);
-  return 0;	
-	            
-  }
+int main(){
+int sum=0,num1,num2;
+printf("Enter two numbers");
+scanf("%d%d",&num1,&num2);
+for(int i=0;i<1000;i++){
+if(i%num1==0||i%num2==0)
+		sum=i+sum;}
+printf("%d",sum);
+return 0;
+}
