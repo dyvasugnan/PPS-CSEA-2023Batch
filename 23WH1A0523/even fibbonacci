@@ -1,0 +1,17 @@
+// even fibonacci numbers
+#include<stdio.h>
+int main(){
+int i,range,sum=0;
+printf("enter range of fibbonacci: ");
+scanf("%d",&range);
+int n1=0 , n2=1 , next=n1+n2;
+	for(i=3;i<=range;i++){
+		n1=n2;
+		n2=next;
+		next=n1+n2;
+		if(next%2==0)
+			sum+=next;
+	}
+	printf("%d",sum);
+return 0;			
+}
