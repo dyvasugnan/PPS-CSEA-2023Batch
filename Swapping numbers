@@ -1,0 +1,12 @@
+#inculde<stdio.h>
+void main(){
+int first,second,temp;
+first = 10 ;
+second = 20;
+// swapping of two numbers 
+temp = first;
+frist = second ;
+second = temp;
+print("after swapping : %d,%d",first,second);
+return 0;
+}
