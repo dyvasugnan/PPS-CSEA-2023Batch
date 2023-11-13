@@ -1,0 +1,14 @@
+//sum and difference of numbers
+#include<stdio.h>
+int main()
+{
+    int num1,num2,sum1,diff1;
+    float num3,num4,sum2,diff2;
+    scanf("%d %d\n %f %f",&num1,&num2,&num3,&num4);
+    sum1=num1+num2;
+    sum2=num3+num4;
+    diff1=num1-num2;
+    diff2=num3-num4;
+    printf("%d%2d\n%0.1f%4.1f",sum1,diff1,sum2,diff2);
+    return 0;
+}
