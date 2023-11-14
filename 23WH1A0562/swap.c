@@ -20,6 +20,7 @@ int main()
   last_digit=first_digit;
   first_digit=temp_var;
   
+  
   return 0;
  } 
  
