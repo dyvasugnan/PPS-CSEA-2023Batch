@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i;
+    printf("Enter the value of n: ");
+    scanf("%d",&n);
+    int arr1[n];
+    printf("Enter the first array elements:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr1[i]);
+    }
+    printf("The first array elements are:\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d  ",arr1[i]);
+    }
+    int arr2[n];
+    for(i=0;i<n;i++)
+    {
+        arr2[i]=arr1[i];
+    }
+    printf("\nThe second array elements are:\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d  ",arr2[i]);
+    }
+    return 0;
+}
