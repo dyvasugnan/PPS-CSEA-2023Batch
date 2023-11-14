@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int number;
+    printf("Enter a number: ");
+    scanf("%d",&number);
+    int N=number,rem,i;
+    int arr[10];
+    for(i=0;i<10;i++)
+    {
+        arr[i]=0;
+    }
+    while(number>0)
+    {
+        rem=number%10;
+        arr[rem]++;
+        number=number/10;
+    }
+    for(i=0;i<10;i++)
+    {
+        printf("Frequency of %d in %d is %d\n",i,N,arr[i]);
+    }
+    return 0;
+}
