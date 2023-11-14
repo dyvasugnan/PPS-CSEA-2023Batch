@@ -1,0 +1,12 @@
+// to find sum of first and last digits using for loop
+#include <stdio.h>
+int main() {
+    int num,first_digit=0,last_digit=0;
+    printf("enter any number\n");
+    scanf("%d",&num);
+    last_digit=num%10;
+    for(int i=num;i>0;i=i/10)
+      first_digit=i%10;
+    printf("sum of first and last digits=%d",first_digit+last_digit);
+return 0;
+}
