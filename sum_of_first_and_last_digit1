@@ -1,0 +1,18 @@
+//this program is to display the sum of first and last digit of the given number using while loop
+#include <stdio.h>
+
+int main()
+{
+ int num,sum;
+ printf("enter any number: ");
+ scanf("%d",&num);
+ int last_digit,first_digit;
+ last_digit = num%10;
+ while(num>=10){
+     num = num/10;
+ }
+ first_digit = num;
+ sum = first_digit+last_digit;
+ printf("%d",sum);
+    return 0;
+}
