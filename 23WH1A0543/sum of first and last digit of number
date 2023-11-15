@@ -1,0 +1,13 @@
+//sum of first and last digit of a number
+#include <stdio.h>
+int main() {
+int num,firstdigit=0,lastdigit=0,sum;
+printf("Enter a number\n");
+scanf("%d",&num);
+lastdigit=num%10;
+for(int i=num;i!=0;i=i/10)
+firstdigit=i%10;
+sum=firstdigit+lastdigit;
+printf("sum of first digit and last digit:%d",sum);
+return 0;
+}
