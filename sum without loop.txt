@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+int num,newnum,lastdigit,firstdigit;
+printf("enter the number");
+scanf("%d",&num);
+lastdigit=num%10;
+int temp=num;
+int orginal=num;
+int digits=0;
+for( ;temp>0;temp=temp/10){
+     digits++;
+   }
+int divisor=1;
+for(int i=1;i<digits;i++){
+   divisor=divisor*10;
+   }
+firstdigit=num/divisor;
+newnum=lastdigit*divisor+orginal%divisor/10*10+firstdigit;
+printf("%d",newnum);
+return 0;
+}
+
