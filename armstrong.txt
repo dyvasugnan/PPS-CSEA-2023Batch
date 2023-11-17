@@ -1,0 +1,19 @@
+//this is the program to print armstrong number
+#include<stdio.h>
+int main(){
+int rem,sum=0,num;
+printf("enter the number");
+scanf("%d",&num);
+int temp=num;
+while(num>0){
+ rem=num%10;
+ num=num/10;
+
+sum=sum+rem*rem*rem;
+}
+if(temp==sum)
+ printf("armstrong ");
+else
+ printf("not a armstrong");
+return 0;
+}
