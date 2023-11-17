@@ -1,0 +1,25 @@
+
+// to check the frequency of a digit in a number
+#include <stdio.h>
+
+int main() {
+    int num,count,digit,i;
+    printf("enter any number\n");
+    scanf("%d",&num);
+    int temp=num;
+    for(i=0;i<=9;i++){
+        count=0;
+        
+        while(num!=0){
+            digit=num%10;
+            if(digit==i)
+            count++;
+            num=num/10;
+        }
+        printf("frequency of %d=%d\n",i,count);
+        num=temp;
+    }
+
+
+    return 0;
+}
