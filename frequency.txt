@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define base 10
+int main()
+{
+  long long num,n;
+ int i,lastdigit,freq[base];
+ printf("enter any number:");
+ scanf("%lld",&num);
+ n=num;
+ for(i=0;i<base;i++){
+    freq[i]=0;
+ }
+ while(n!=0){
+    lastdigit=n%10;
+    n/=10;
+    freq[lastdigit]++;
+ }
+ printf("frequency of each digit in %lld is: \n",num);
+ for(i=0;i<base;i++){
+    printf("frequency of %d = %d\n",i,freq[i]);
+ }
+return 0;
+}
