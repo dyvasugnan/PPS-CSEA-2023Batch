@@ -1,0 +1,16 @@
+// to input and copy array elements and display  
+#include <stdio.h>
+
+int main() {
+    int a[10]={10,1,95,30,45,12,60,89,40,-4},a1[10],i;
+    for(i=0;i<10;i++){
+          a1[i] =a[i];
+      }
+    printf("array1:");
+    for(i=0;i<10;i++)
+      printf("%d ",a[i]);
+    printf("\narray2:");
+    for(i=0;i<10;i++)
+       printf("%d ",a1[i]);
+    return 0;
+}
