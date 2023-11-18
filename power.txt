@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int base,exponent,res=1;
+    printf("enter the base and exponent");
+    scanf("%d%d",&base,&exponent);
+    for(int i=1;i<=exponent;i++){
+        res=res*base;
+    }
+    printf("%d",res);
+    return 0;
+}
