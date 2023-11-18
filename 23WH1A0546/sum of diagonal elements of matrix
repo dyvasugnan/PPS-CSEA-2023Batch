@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+	int a[10][10],r,c,i,j,sum=0;
+	printf("enter no.of rows and columns\n");
+	scanf("%d %d",&r,&c);
+	printf("enter %d elements",r*c);
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++){
+			scanf("%d",&a[i][j]);	
+		}
+	}
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++){
+			if(i==j)
+			sum=sum+a[i][j];
+		}
+	}
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++){	
+	}
+}
+	printf("sum of diagonal elements is %d",sum);
+	return 0;
+}
