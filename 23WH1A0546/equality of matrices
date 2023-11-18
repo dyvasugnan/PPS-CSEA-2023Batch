@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+	int a[10][10],b[10][10],r,c,i,j,count=0;
+	printf("enter no.of rows and columns of 1st matrix \n");
+	scanf("%d %d", &r,&c);
+	printf("enter %d values\n",r*c);
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++)
+		scanf("%d",&a[i][j]);
+	}
+	printf("enter no.of rows and columns of 2nd matrix \n");
+	scanf("%d %d", &r,&c);
+	printf("enter %d values\n",r*c);
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++)
+		scanf("%d",&b[i][j]);
+	
+}
+  	for(i=0;i<r;i++){
+		for(j=0;j<c;j++)
+		if(a[i][j]!=b[i][j])
+		count++;
+	}
+	if(count==0)
+	printf("matrices are equal");
+	else
+	printf("matrices are not equal");
+}
