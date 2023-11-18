@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+int i,j,k,size;
+printf("enter the size");
+scanf("%d",&size);
+for( i=1;i<=size;i++){
+ for( j=i;j<size;j++){  
+  printf(" ");
+  }
+for(k=1;k<=i;k++){
+ printf("*");
+ }
+printf("\n");
+}
+return 0;
+}
