@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(){
+    int a[3][3],i,j,flag=1;
+    printf("enter the elements of the matrix");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            if(a[i][j]!=1 && a[j][i]!=0){
+                flag=0;
+                break;
+            }
+        }
+    }
+    if(flag==1)
+    printf("it is a identity matrix");
+    else
+    printf("it is not identity matrix");
+    return 0;
+}
+
+ 
