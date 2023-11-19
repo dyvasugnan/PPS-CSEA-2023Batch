@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+  int num;
+  printf("Enter a number: ");
+  scanf("%d",&num);
+  int n,ld,fd,r;
+  n=num;
+  int t=n;
+  ld=num%10;
+  while(n>0)
+  {
+    r=n%10;
+    n=n/10; 
+    if(n==0)
+    fd=r;
+  }
+  int temp=ld;
+  ld=fd;
+  fd=temp;
+  return 0;
+ } 
