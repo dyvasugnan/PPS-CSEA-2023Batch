@@ -1,0 +1,16 @@
+//sum of factors of a given no. is greater than given no. then that no. is called smart no.#include<stdio.h>
+int main() {int fact=1,sum=0,num;
+            printf("enter a num");
+            scanf("%d",&num);
+            while(fact<=num){
+                if(num%fact==0)
+                    sum=sum+fact;
+					fact++;                    
+            }
+           			 if(sum>num)
+               		 printf("yes");
+            		else
+               		 printf("no");
+return 0;
+}
+
