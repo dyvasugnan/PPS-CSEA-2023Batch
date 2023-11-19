@@ -4,13 +4,13 @@ int main() {int fact=1,sum=0,num;
             scanf("%d",&num);
             while(fact<=num){
                 if(num%fact==0)
-                    sum=sum+fact;
-					fact++;                    
+                sum=sum+fact;
+		fact++;                    
             }
-           			 if(sum>num)
-               		 printf("yes");
+           		if(sum>num)
+               		printf("yes");
             		else
-               		 printf("no");
+               		printf("no");
 return 0;
 }
 
