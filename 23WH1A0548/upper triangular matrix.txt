@@ -24,7 +24,7 @@ int main() {
                 break;
             }
         }
-        if (!isUpperTriangular) {
+        if (isUpperTriangular) {
             break;
         }
     }
