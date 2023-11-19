@@ -1,0 +1,16 @@
+//This programme is to find the power of a number without using power function.
+
+#include<stdio.h>
+
+int main(){
+    int base,exponent,i,result=1;
+    printf("Enter the value of base : ");
+    scanf("%d",&base);
+    printf("Enter the value of exponent : ");
+    scanf("%d",&exponent);
+    for(i=1; i<=exponent ; i++){
+        result = result*base;
+    }
+    printf("%d^%d = %d",base,exponent,result);
+    return 0;
+}
