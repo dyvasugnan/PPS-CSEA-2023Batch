@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+   char y;
+   printf("enter any character");
+   scanf("%c",&y);
+   printf("ascii=%d",y);
+return 0;
+}
