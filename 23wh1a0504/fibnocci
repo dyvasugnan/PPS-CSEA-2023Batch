@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+int n,term1,term2,nextterm,i;
+printf("enter any two numbers");
+scanf("%4d%4d",&term1,&term2);
+printf("enter range");
+scanf("%d",&n);
+printf("%d",term1);
+printf("%d",term2);
+for(i=1;i<=n;i++){
+nextterm=term1+term2;
+printf("%4d",nextterm);
+term1=term2;
+term2=nextterm;
+}
+return 0;
+}
