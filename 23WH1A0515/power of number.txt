@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() { 
+    int n,m;
+    printf("enter the base and power numbers"); 
+    scanf("%d%d",&n,&m);
+    int a=n;
+    for(int i=1;i<m;i++){
+        a=a*n; 
+    }
+    printf("%d^%d=%d",n,m,a); 
+    return 0;
+}
