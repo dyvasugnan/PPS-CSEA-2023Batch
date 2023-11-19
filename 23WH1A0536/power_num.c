@@ -1,5 +1,6 @@
 //to find the power of number using for loop
 #include<stdio.h>
+#include<math.h>
 int main(){
     int base,i,exp,pow=1;
     printf("Base = ");
