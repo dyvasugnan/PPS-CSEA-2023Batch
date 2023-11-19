@@ -1,0 +1,31 @@
+//no.of days in a month
+#include<stdio.h>
+int main () {
+int month_no;
+printf("enter any month number ");
+scanf("%d",&month_no);
+switch(month_no){
+case 1 :
+case 3 :
+case 5 :
+case 7 :
+case 9 :
+case 11 :
+     printf("no.of days are 30");
+     break ;
+case 2:
+     printf("no.of days are 29");
+     break ;
+case 4:
+case 6 :
+case 8 :
+case 10 :
+case 12 :
+	printf("no.of days are 31");
+	break ;
+
+default :
+	printf("given no is not suitable");
+	}
+return 0;
+}
