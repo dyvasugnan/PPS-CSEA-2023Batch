@@ -1,10 +1,17 @@
-#include<stdio.h>
-int main(){
-	int base,exponent,i,power=1;
-	printf("enter base and exponent");
-	scanf("%d%d",&base,&exponent);
-	for(i=1;i<=exponent;i++){
-		power=power*base;
-	}
-	printf("power is %d",power);
+#include <stdio.h>
+int main()
+{
+    int base,power, exponent;
+    power = 1;
+    int i;
+    printf("Enter base: ");
+    scanf("%d", &base);
+    printf("Enter exponent: ");
+    scanf("%d", &exponent);
+    for(i=1; i<=exponent; i++)
+    {
+        power = power * base;
+    }
+    printf("%d ^ %d = %d", base, exponent, power);
+    return 0;
 }
