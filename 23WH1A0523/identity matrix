@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int a[5][5],r,c,i,j,count=0;
+    printf("enter rows and columns\n");
+    scanf("%d %d",&r,&c);
+    printf("enter %d values\n",r*c);
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++)
+           scanf("%d",&a[i][j]);
+    }
+    
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            if((i==j && a[i][j]==1) || (i!=j && a[i][j]==0))
+                  count+=1;
+        }
+    }
+    if (count==r*c)
+        printf("it is a identity matrix");
+    else
+        printf("it is not a identity matrix");
+return 0;
+}
