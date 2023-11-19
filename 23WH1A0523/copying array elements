@@ -1,0 +1,14 @@
+//copying array elements
+#include <stdio.h>
+int main() {
+    int a[10]={10,1,95,30,45,12,60,89,40,-4};
+  int a1;
+    for(int i=0;i<10;i++){
+          a1[i] =a[i];
+      }
+    for(i=0;i<10;i++)
+      printf("array1:%d ",a[i]);
+    for(i=0;i<10;i++)
+       printf("/narray2:%d ",a1[i]);
+    return 0;
+}
