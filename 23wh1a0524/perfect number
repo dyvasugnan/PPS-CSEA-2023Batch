@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+int num,fac=1,sum=0;
+            printf("enter any number");
+            scanf("%d",&num);
+  while(fac<=num){
+     if (num%fac==0){
+        sum+=fac;
+        fac++;}
+ if(sum==num)
+  printf("the given number is perfect number");
+else
+  printf("the given number is not a perfect number");
+ return 0;
+}
+}
