@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+	int num,firstdigit,lastdigit,i;
+	printf("enter a number\n");
+	scanf("%d",& num);
+	lastdigit=num%10;
+	for(i=num;i>0;i=i/10){
+		firstdigit=i%10;
+	}
+	printf("sum of first and lastdigits is %d",firstdigit+lastdigit);
+	return 0;
+}
