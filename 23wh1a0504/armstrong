@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+   int x,y;
+   printf("enter any two numbers positive or negative");
+   scanf("%d%d",&x,&y);
+   if (x>0&&y>0)
+      printf("given points are in first quadrant");
+   else if (x>0&&y<0)
+      printf("given ponts are in fourth quadrant");
+   else if (x<0&&y>0)
+      printf("given points are in secound quadrant");
+   else 
+      printf("given points are in third quadrant");
+              return 0;
+}                               
