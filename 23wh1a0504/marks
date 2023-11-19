@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+  int sub1,sub2,sub3,sub4,sub5,sub6,sum,avg;
+  printf("enter any six digits");
+  scanf("%d%d%d%d%d%d",&sub1,&sub2,&sub3,&sub4,&sub5,&sub6);
+   sum=sub1+sub2+sub3+sub4+sub5+sub6;
+   avg=sum/6;
+   if (avg>=90)
+   printf("grade of student is A+");
+   else if (avg>=80&&avg<90)
+   printf("grade of student is A");
+   else if (avg>=70&&avg<80)
+   printf("grade of student is B+");
+   else if (avg>=60&&avg<70)
+   printf("grade of student is B");
+   else if (avg>=50&&avg<60)
+   printf("grade of student is C");
+   else
+   printf("grade of student is F");
+   return 0;
+                     }
