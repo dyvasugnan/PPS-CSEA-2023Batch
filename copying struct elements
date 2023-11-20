@@ -1,0 +1,17 @@
+//copying sturcture elements from one object to another
+#include<stdio.h>
+#include<string.h>
+struct student{
+	char name[10];
+	int age;
+	float m;
+}s;
+int main(){
+	struct student s1={"nissi",18,2};
+	struct student s2,s3;
+	strcpy(s2.name,s1.name);
+	s2.age=s1.age;
+	s2.m=s1.m;
+	printf("%s\n%d\n%f",s2.name,s2.age,s2.m);
+return 0;	
+}
