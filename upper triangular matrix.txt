@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+#define MAX_SIZE 10
+
+int main() {
+    int matrix[MAX_SIZE][MAX_SIZE];
+    int rows, cols, isUpperTriangular = 1;
+
+    printf("Enter the number of rows and columns of the matrix: ");
+    scanf("%d %d", &rows, &cols);
+
+    printf("Input elements of matrix:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    
+    for (int i = 1; i < rows; i++) {
+        for (int j = 0; j < i; j++) {
+            if (matrix[i][j] != 0) {
+                isUpperTriangular = 0;
+                break;
+            }
+        }
+        if (!isUpperTriangular) {
+            break;
+        }
+    }
+
+    if (isUpperTriangular) {
+        printf("Matrix is upper triangular\n");
+    } else {
+        printf("Matrix is not upper triangular\n");
+    }
+
+    return 0;
+}

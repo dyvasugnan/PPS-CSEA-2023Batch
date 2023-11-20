@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+void leftRotateByOne(int arr[], int size) {
+    int temp = arr[0], i;
+    for (i = 0; i < size - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+    arr[size - 1] = temp;
+}
+
+void leftRotate(int arr[], int size, int rotations) {
+    for (int i = 0; i < rotations; i++) {
+        leftRotateByOne(arr, size);
+    }
+}
+
+int main() {
+    int array[50], size, rotations;
+
+    printf("Input number of elements in array: ");
+    scanf("%d", &size);
+
+    printf("Input %d elements in array: ", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    printf("Input number of times to rotate: ");
+    scanf("%d", &rotations);
+
+    printf("Array after left rotation %d times: ", rotations);
+    leftRotate(array, size, rotations);
+
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
