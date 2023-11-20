@@ -17,8 +17,17 @@ int count=0;
 		}
 		}
 	}
+int count1=0;
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
+		if(i!=j){
+			if(mat[i][j]==0)
+			count1++;
+		}
+		}
+	}
 
-if(count==3){
+if(count==3&&count1==6){
 	printf("identity matrix");
 	
 }
