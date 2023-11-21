@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-	int num,i,j;
+	int num,i,j,max;
 	printf("enter number :");
 	scanf("%d",&num);
 	for(i=1;i<=num;i++){
@@ -14,8 +14,10 @@ int main(){
 			}
 		if(count==2){
 			printf("%4d",i);
+			max=i;
 				}
 		}
 	}
+	printf("\nlargest prime factor is %d",max);
 	return 0;
 }
