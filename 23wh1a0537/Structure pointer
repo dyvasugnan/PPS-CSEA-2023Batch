@@ -1,0 +1,15 @@
+#include <stdio.h>
+struct employee {
+    char name[10];
+    int id,salary;
+    float HRA,DA,tax,net;
+}s;
+struct employee *ptr;
+int main() {
+    ptr=&s;
+    printf ("enter employee name,id, salary,HRA,DA,income tax\n");
+    scanf ("%s %d %d %f %f %f",&ptr->name,&ptr->id,&ptr->salary,&ptr->HRA,&ptr->DA,&ptr->tax);
+ ptr->net= ptr->salary +ptr->HRA+ptr->DA-ptr->tax;
+ printf ("employee name:%s\nemployee id:%d\nnet salary:%.3f",ptr->name,ptr->id,ptr->net);
+   return 0;
+}
