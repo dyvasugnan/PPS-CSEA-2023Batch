@@ -1,0 +1,14 @@
+#include <stdio.h> 
+int main() {
+    int n1= -2,n2= 2;
+    int n,sum=0;
+    scanf("%d",&n);
+    printf("febonacci sequence");
+    for(int i=0;i<=n;i++){
+        sum=n1+n2;
+        printf("%d\t",sum); 
+        n1=n2;
+        n2=sum;
+    }
+return 0;
+}
