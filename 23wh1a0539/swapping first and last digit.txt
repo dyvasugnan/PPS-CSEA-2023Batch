@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int number, numCopy, firstDigit, lastDigit, numberOfDigits = 0;
+
+    printf("Input any number: ");
+    scanf("%d", &number);
+
+    numCopy = number;
+
+    // Counting the number of digits in the input number
+    while (numCopy != 0) {
+        numCopy /= 10;
+        numberOfDigits++;
+    }
+
+    if (numberOfDigits >= 2) {
+        lastDigit = number % 10; 
+
+        
+        numCopy = number;
+        while (numCopy >= 10) {
+            numCopy /= 10;
+        }
+        firstDigit = numCopy;
+
+       
+        int power = 1;
+        for (int i = 1; i < numberOfDigits; i++) {
+            power *= 10;
+        }
+
+        
+        int swappedNumber = lastDigit * power;
+        swappedNumber += (number % power) - lastDigit;
+        swappedNumber += firstDigit;
+
+        printf("Number after swapping first and last digit: %d\n", swappedNumber);
+    } else {
+        printf("Please enter a number with at least two digits.\n");
+    }
+
+    return 0;
+}
