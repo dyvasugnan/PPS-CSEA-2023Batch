@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char num[1000];
+    int i;
+    int frequency[10]={0};
+    scanf("%s",num);
+    int l=strlen(num);
+    for( i=0;i<l;i++){
+        if(num[i]>='0' && num[i]<='9'){
+            frequency[num[i]-'0']++;
+        }
+    }
+    for(i=0;i<10;i++){
+            printf("%d ",frequency[i]);
+    }
+    return 0;
+}
