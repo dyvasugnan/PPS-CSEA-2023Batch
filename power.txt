@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int base,exponent,res=1;
-    printf("enter the base and exponent");
-    scanf("%d%d",&base,&exponent);
-    for(int i=1;i<=exponent;i++){
-        res=res*base;
-    }
-    printf("%d",res);
+    int x,n,result;
+    printf("Enter base");
+    scanf("%d",&x);
+    printf("enter power");
+    scanf("%d",&n);
+    result=pow(x,n);
+    printf("%d",result);
+
     return 0;
 }

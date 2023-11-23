@@ -1,14 +1,17 @@
-#include<stdio.h>
-int main(){
-    int num,n1=0,n2=1,i,nextterm;
-printf("enter any number: ");
+#include <stdio.h>
+
+int main() {
+int num,fo=0,f1=1,f2;
+printf("enter num value ");
 scanf("%d",&num);
-printf("%4d%4d",n1,n2);
-for(i=3;i<=num;i++){
-    nextterm=n1+n2;
-    n1=n2;
-    n2=nextterm;
-    printf("%4d",nextterm);
+printf("%d%d",fo,f1);
+for(int i=1;i<=num;i++){
+   
+    f2=fo+f1;
+    printf("%d",i);
+    fo=f1;
+    f1=f2;
 }
-return 0;
+
+    return 0;
 }

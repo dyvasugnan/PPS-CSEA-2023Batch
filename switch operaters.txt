@@ -1,0 +1,24 @@
+
+#include<stdio.h>
+int main() {
+    int a,b,ch;
+    printf("enter two numbers");
+    scanf("%d%d",&a,&b);
+    printf("1.Addition\n2.Subtraction\n3.product\n4.division\n5.remainder\n");
+    printf("Enter a choice");
+    scanf("%d",&ch);
+    switch (ch)
+    { case 1:printf("sum is %d",a+b);
+             break;
+    case 2:printf("dif is %d",a-b);
+           break;
+    case 3:printf("prdct is %d",a*b);
+           break;
+    case 4:printf("quotient is %d",a/b);
+           break;
+    case 5:printf("rem is %d",a%b);
+           break;
+    default:printf("Invalid");
+    }
+    return 0;
+}
