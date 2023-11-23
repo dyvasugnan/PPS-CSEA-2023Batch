@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int sum_of_squares = 0;
+    int sq_of_sum = 0;
+    printf("enter value for n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        sum_of_squares += i*i;
+    }
+    int sum =(n*(n+1))/2;
+    sq_of_sum = sum*sum;
+    int diff = sq_of_sum - sum_of_squares;
+    printf("difference of sq of sum and sum of squares: %d",diff);
+    return 0;
+}
