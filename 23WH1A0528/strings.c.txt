@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//to print strings have space
+int main(){
+    char line[100];
+    printf("Hello, World!\n");
+    scanf("%[^\n]c",line);
+  	printf("%s",line);
+    return 0;
+}
