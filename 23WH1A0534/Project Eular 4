@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int i,j,n,on,rem,rev,largest=0,nd;
+    scanf("%d",&nd);
+    for(i=pow(10,nd-1);i<pow(10,nd);i++)
+    {
+        for(j= pow(10,nd-1);j<pow(10,nd);j++)
+        {
+            rev=0;
+            n=i*j; 
+            on = n;
+            while(n!=0)
+            {
+                rem=n%10;
+                rev=rev*10 + rem;
+                n=n/10;
+            }
+            if(on==rev)
+            {
+                if(on>largest)
+                {
+                    largest=on;
+                }
+            }
+        }
+    }
+    printf("Largest palindrome product %d",largest);
+}
+
