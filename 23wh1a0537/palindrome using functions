@@ -1,0 +1,26 @@
+// to find number is a palindrome or not using functions
+#include <stdio.h>
+#include<stdbool.h>
+bool ispalindrome(int);
+
+int main() {
+    int num;
+    printf("enter any number\n");
+    scanf("%d",&num);
+    if (ispalindrome(num))
+       printf("number is a palindrome");
+    else
+       printf("number is not a palindrome");
+}
+bool ispalindrome(int num){
+    int rev=0,temp=num;
+    while(num>0){
+        rev=rev*10+num%10;
+        num=num/10;
+    }
+    if(rev==temp)
+        return true;
+    else 
+       return false;
+    
+}
