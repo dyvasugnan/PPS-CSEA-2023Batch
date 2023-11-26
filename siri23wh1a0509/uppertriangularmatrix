@@ -1,0 +1,45 @@
+#include<stdio.h>
+void UpperTriangularMatrix(int row, int col)
+{
+       int a[row][col];
+       printf("\nEnter the Elements \n");
+      
+      
+       for(int i = 0; i<row; i++)
+       {
+         for(int j = 0; j<col; j++)
+         {
+       		scanf("%d", &a[i][j]);
+         }
+       }
+       
+       printf("Required Matrix : "); 
+       
+ 	   for(int i = 0; i<row; i++)
+       {
+         printf("\n");
+         for(int j = 0; j<col; j++)
+         {
+             
+     		 if(j >= i)
+    		 printf(" %d ", a[i][j]);
+    		 else
+    		 printf(" 0 ");
+          }
+       }
+}
+
+int main()
+{
+  int row, col;
+  printf("\nEnter Number of rows : ");
+  scanf("%d", &row); 
+
+  printf("\nEnter Number of columns : ");
+  scanf("%d", &col);
+  
+
+  UpperTriangularMatrix(row,col);
+  
+  return 0;
+}
