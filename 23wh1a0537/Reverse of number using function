@@ -1,0 +1,19 @@
+//to find reverse of a number using function 
+#include <stdio.h>
+int rev(int);
+
+int main() {
+    int num;
+    printf("enter any number\n");
+    scanf("%d",&num);
+   int r=rev(num);
+   printf("%d",r);
+}
+int rev(int num){
+    int rev=0;
+    while (num>0){
+    rev=rev*10+num%10;
+    num=num/10;
+    }
+    return rev;
+}
