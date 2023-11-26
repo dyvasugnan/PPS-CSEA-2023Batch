@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int number, numCopy, digit;
+    int frequency[10] = {0};
+
+    printf("Input any number: ");
+    scanf("%d", &number);
+
+    numCopy = number;
+
+    while (numCopy != 0) {
+        digit = numCopy % 10;
+        frequency[digit]++;
+        numCopy /= 10;
+    }
+
+
+    for (int i = 0; i < 10; i++) {
+        printf("Frequency of %d = %d\n", i, frequency[i]);
+    }
+
+    return 0;
+}
