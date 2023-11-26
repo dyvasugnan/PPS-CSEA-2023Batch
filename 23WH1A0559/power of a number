@@ -1,0 +1,14 @@
+int main()
+{
+    int base,exponent;
+    long power=1;
+    int i=1;
+    printf("enter base:");
+  scanf("%d",&base);
+  printf("enter exponent:");
+  scanf("%d",&exponent);
+  for(i=1;i<=exponent;i++) {
+      power=power*base;
+  }
+  printf("%d^%d=%d",base,exponent,power);
+  return 0;
