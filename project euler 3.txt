@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    long long number = 600851475143;
+    long long divisor = 2;
+    
+    while (number > 1) {
+        if (number % divisor == 0) {
+            number /= divisor;
+        } else {
+            divisor++;
+        }
+    }
+    
+    printf("The largest prime factor of 600851475143 is: %lld\n", divisor);
+    
+    return 0;
+}
