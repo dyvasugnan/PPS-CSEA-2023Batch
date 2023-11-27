@@ -1,0 +1,16 @@
+//greater than value 
+#include<stdio.h>
+int main()
+{
+  int num1,num2,num3,result;
+  printf(“enter three values”);
+  scanf("%d%d%d",&num1,&num2,&num3);
+if (result = (num1 > num2)?num1:num2)
+printf("num 1");
+else if (result = (num2 > num1)?num2:num3)
+printf("num2");
+else 
+ printf("num 3");
+printf("largest:%d",result);
+ return 0;
+ }
