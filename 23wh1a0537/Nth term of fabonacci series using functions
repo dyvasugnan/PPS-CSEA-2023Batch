@@ -1,0 +1,20 @@
+// to find nth term of fabonacci series using functions
+#include <stdio.h>
+int fabonacci(int);
+int main() {
+    int n;
+    printf("enter the value of n\n");
+    scanf("%d",&n);
+    int ans=fabonacci(n);
+   return 0;
+}
+int fabonacci(int n){
+    int n1=0,n2=1,n3=0,i;
+    for(i=3;i<=n;i++){
+          n3=n1+n2;
+          n1=n2;
+          n2=n3;
+          
+    }
+    printf("%dth term is %d",n,n3);
+}
