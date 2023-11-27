@@ -1,0 +1,20 @@
+//to find n th term of fibinocci series using functions
+#include<stdio.h>
+int n_term(int);
+int main(){
+    int num;
+    printf("enter a number: ");
+    scanf("%d",&num);
+    int result=n_term(num);
+    printf("%d",result);
+}
+int n_term(int num){
+    int t1=0,t2=1,next=0,i;
+    next=t1+t2;
+    for(i=3;i<=num;i++){
+        t1=t2;
+        t2=next;
+        next=t1+t2;
+    }
+    return t2;
+}
