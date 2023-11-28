@@ -1,0 +1,21 @@
+#include <stdbool.h>
+#include <stdio.h>
+int fibonacci(int);
+int main() {
+    int a;
+    printf("enter any num\n");
+    scanf("%d",&a);
+   int result=fibonacci(a);
+   printf("%d",result);
+}
+int fibonacci(int x){
+    int n1=0,n2=1,n3=0;
+    for(int i=3;i<=x;i++){
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+    }
+    printf("%dth term is %d\n",x,n3);
+    return n3;
+}
+ 
