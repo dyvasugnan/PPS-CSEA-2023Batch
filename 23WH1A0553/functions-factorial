@@ -1,0 +1,18 @@
+#include <stdbool.h>
+#include <stdio.h>
+int fact(int);
+int main() {
+    int a;
+    printf("enter any num\n");
+    scanf("%d",&a);
+   int result=fact(a);
+   printf("%d",result);
+}
+int fact(int x){
+    int result=1;
+    for(int i=1;i<=x;i++){
+        result=result*i;
+    }
+    return result;
+}
+ 
