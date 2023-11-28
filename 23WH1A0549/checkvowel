@@ -1,0 +1,37 @@
+#include<stdio.h>
+int checkvowel();
+int main(){
+    int result=checkvowel();
+    printf("%d",result);
+}
+int checkvowel(){
+    int count=0,i;
+    char ch[20];
+    printf("enter the string");
+    scanf("%s",ch);
+    for(i=0;i<20;i++){
+        if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u'||ch[i]=='A'||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='U'){
+            count++;
+            break;
+        }
+    }
+    if(count!=0)
+     return 1;
+    else
+     return 0;
+}
+    
+
+         
+            
+         
+         
+         
+    
+
+         
+            
+         
+         
+         
+    
