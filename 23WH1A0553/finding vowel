@@ -1,0 +1,19 @@
+#include <string.h>
+#include <stdio.h>
+int vowel(char*);
+int main() {
+    char str[20];
+    printf("enter any string\n");
+    scanf("%s",str);
+   char v=vowel(str);
+}
+int vowel(char *str){
+    int l=strlen(str);
+    int count=0,i;
+    for(i=0;i<l;i++){
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+        count++;
+    }
+    printf("%d",count);
+}
+ 
