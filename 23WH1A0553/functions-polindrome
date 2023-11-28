@@ -1,0 +1,24 @@
+#include <stdbool.h>
+#include <stdio.h>
+bool isPolindrome(int);
+int main() {
+    int a;
+    printf("enter any num\n");
+    scanf("%d",&a);
+   bool result=isPolindrome(a);
+   printf("%d",result);
+}
+bool isPolindrome(int x){
+    int rem,rev=0;
+    int temp=x;
+    while(x>0){
+        rem=x%10;
+        rev=rev*10+rem;
+        x=x/10;
+    }
+    if(rev==temp)
+               return true;
+    else
+               return false;
+}
+ 
