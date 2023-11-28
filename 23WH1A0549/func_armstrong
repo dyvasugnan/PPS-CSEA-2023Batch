@@ -1,0 +1,37 @@
+#include<stdio.h>
+int isarmstrong(int);
+int main(){
+    int n;
+    printf("enter the num");
+    scanf("%d",&n);
+    int result=isarmstrong(n);
+    printf("%d",result);
+}
+int isarmstrong(int n){
+    int sum=0,rem;
+    int temp=n;
+    while(n>0){
+        rem=n%10;
+        n=n/10;
+        sum=sum+rem*rem*rem;
+    }
+    if(temp==sum)
+     return 1;
+    else
+     return 0;
+}
+    
+
+         
+            
+         
+         
+         
+    
+
+         
+            
+         
+         
+         
+    
