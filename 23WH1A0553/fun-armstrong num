@@ -1,0 +1,35 @@
+#include <stdbool.h>
+#include <stdio.h>
+bool isArmstrong(int);
+int main() {
+    int a;
+    printf("enter any num\n");
+    scanf("%d",&a);
+   bool result=isArmstrong(a);
+   printf("%d",result);
+}
+bool isArmstrong(int x){
+    int rem,result=0,count=0,mul=1,cnt;
+    int temp=x,q=x;
+    while(q>0){
+        q=q/10;
+        count++;
+    }
+    cnt=count;
+    while(temp>0){
+        rem=temp%10;
+        while(cnt>0){
+            mul=mul*rem;
+            cnt--;
+        }
+        result=result+mul;
+        cnt=count;
+        temp=temp/10;
+        mul=1;
+    }
+    if(result==x)
+               return true;
+    else
+               return false;
+}
+ 
