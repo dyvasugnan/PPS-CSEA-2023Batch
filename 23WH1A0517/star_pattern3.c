@@ -1,0 +1,18 @@
+/* 
+****
+****
+****
+****
+*/
+#include<stdio.h>
+int main(){
+	int i,j,num;
+	printf("enter rows number: ");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=0;j<=num;j++){
+			printf("*");
+		}
+		printf("\n");
+	}
+}
