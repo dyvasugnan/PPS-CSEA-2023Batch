@@ -1,0 +1,18 @@
+#include <stdio.h>
+int fibonacci(int);
+int main() {
+    int n;
+    printf("enter which term");
+    scanf("%d",&n);
+    int num = fibonacci(n);
+    printf("the number in the %d term is %d",n,num);
+}
+int fibonacci(int x){
+    int n1 =-1,n2 =1,next_term;
+    for(int i=1;i<=x;i++){
+        next_term = n1+n2;
+        n1=n2;
+        n2=next_term;
+    }
+    return next_term;
+}
