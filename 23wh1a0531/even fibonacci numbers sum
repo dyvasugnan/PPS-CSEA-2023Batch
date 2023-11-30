@@ -1,0 +1,21 @@
+//sum of even terms of fibonacci series were the sequence doesnot exceed 4 million
+#include <stdio.h>
+
+int main()
+{
+    int t1=1,t2=2,next_term,sum=2;
+    printf("%4d%4d",t1,t2);
+    while(next_term<4000000){
+        next_term=t1+t2;
+        if(next_term<4000000){
+        if(next_term%2==0){
+            sum=sum+next_term;
+        }
+        t1=t2;
+        t2=next_term;
+    }
+    }
+    printf("\n%d",sum);
+
+    return 0;
+}
