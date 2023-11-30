@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool isStrong(int);
+int factorial(int);
+int main()
+{
+    int n,i,f=1,rem,sum=0,on;
+    printf("Enter a number");
+    scanf("%d",&n);
+    bool check = isStrong(n);
+    if(check==1)
+    {
+        printf("Strong number");
+    }
+    else
+    {
+        printf("Not strong number");
+    }
+}
+bool isStrong(int n)
+{
+    int f,sum=0,i,rem,on;
+    on=n;
+    while(n!=0)
+    {
+        rem=n%10;
+        f=factorial(rem);
+        sum+=f;
+        n=n/10;
+    }
+    if (sum==on)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int factorial(int n)
+{
+    int i,fact=1;
+    for(i=1;i<=n;i++)
+    {
+        fact *= i;
+    }
+    return fact;
+}
