@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct student{
+    char name[20];
+    int age;
+    float m1,m2,m3;
+    struct address{
+        char HNO[10];
+        char state[50];
+        int pincode;
+    }ad;
+}s;
+int main(){
+    printf("enter name,age and marks of the student:");
+    scanf("%s %d %f %f %f",s.name,&s.age,&s.m1,&s.m2,&s.m3);
+    printf("%s %d %f %f %f",s.name,s.age,s.m1,s.m2,s.m3);
+    printf("\nenter the address:");
+    scanf("%s %s %d",s.ad.HNO,s.ad.state,&s.ad.pincode);
+    printf("%s %s %d",s.ad.HNO,s.ad.state,s.ad.pincode);
+    
+}
