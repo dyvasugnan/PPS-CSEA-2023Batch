@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<math.h>
+bool is_armstrong(int);
+int main(){
+    int num=153;
+    bool armstrong_num=is_armstrong(num);
+    printf("%d",armstrong_num);
+    return 0;
+}
+bool is_armstrong(int x){
+    int count=0,rem,sum=0;
+    int n=x;
+    while(x!=0){
+        x=x/10;
+        count++;
+    }
+    x=n;
+    for(int i=0;i<count;i++){
+        while(x!=0){
+            rem=x%10;
+            sum=sum+pow(rem,count);
+            x=x/10;
+         }
+    }    
+    if (sum==n)
+        return 1;
+    else
+        return 0;
+}
