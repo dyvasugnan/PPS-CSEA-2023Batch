@@ -1,0 +1,23 @@
+int countduplicate(int[],int);
+int main(){
+    int a[50],n,i;
+    printf("enter the range");
+    scanf("%d",&n);
+    printf("enter the elemnts");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    int result=countduplicate(a,n);
+    printf("%d",result);
+}
+int countduplicate(int a[],int n){
+    int count=0;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i] == a[j]){
+                count++;
+                break;
+            }
+        }
+    }
+    return count;
+}
