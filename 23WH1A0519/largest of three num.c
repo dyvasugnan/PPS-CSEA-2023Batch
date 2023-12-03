@@ -14,10 +14,11 @@ int main()
            {
                printf("num1=%d is largest",num1);
            }
+           else
+            printf("num3=%d is largest",num3);
        }
-       else
-       {
-            if(num2>num3)
+       else {
+            if(num1>num3)
                 printf("num2=%d is largest",num2);
             else
                 printf("num3=%d is largest",num3);
