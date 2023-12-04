@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+int no_of_vowels();
+int main(){
+	int count = no_of_vowels();
+	printf("there are %d vowels in the given name",count);
+}
+int no_of_vowels(){
+	char name[20],count=0;
+	printf("Enter a name : ");
+	scanf("%s",name);
+	int len = strlen(name);
+	for(int i = 0;i<len;i++){
+	    if(name[i]=='a'|| name[i]=='e'|| name[i]=='i'|| name[i]=='o'|| name[i]=='u'){		
+			count++;
+	    }
+	}
+	return count;
+}  

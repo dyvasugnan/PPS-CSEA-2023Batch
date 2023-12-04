@@ -1,0 +1,13 @@
+#include<stdio.h>
+int count_coprimesPairs(int,int);
+int main(){
+	int lower_lt,upper_lt;
+	printf("enter ranges : ");
+	scanf("%d%d",&lower_lt,&upper_lt);
+	int count = count_coprimesPairs(lower_lt,upper_lt);
+	printf("%d is count",count);
+}
+int count_coprimesPairs(int l,int r){
+	int count;
+	count = (r+l-1)/2;
+}
