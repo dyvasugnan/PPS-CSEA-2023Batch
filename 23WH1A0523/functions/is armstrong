@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool isarmstrong(int);
+int main(){
+	int num;
+	scanf("%d",&num);
+	int result=isarmstrong(num);
+	printf("%d",result);
+}
+bool isarmstrong(int num){
+	int rev,sum=0;
+	int temp=num;
+	while(num!=0){
+	rev=num % 10;
+	sum=sum+rev*rev*rev;
+	num /= 10;
+	}
+	if(temp==sum)
+		return 1;
+	else
+		return 0;
+}
+	
+	
