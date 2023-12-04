@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool ispalindrome(int);
+int main(){
+	int num;
+	scanf("%d",&num);
+	int res=ispalindrome(num);
+        printf("%d",res);
+}
+bool ispalindrome(int n){
+	int temp=n;
+	int rev=0,rem;
+	while(n!=0){
+	rem=n%10;
+	rev=rev*10+rem;
+	n /= 10;
+	}
+	if (rev==temp)
+		return 1;
+	else
+		return 0;
+}
