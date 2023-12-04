@@ -1,0 +1,13 @@
+#include <stdio.h>
+int marks_avg(int,int,int);
+int main() {
+    int m1,m2,m3;
+    printf("Enter marks of three subjects :");
+    scanf("%d%d%d",&m1,&m2,&m3);
+    int avg = marks_avg(m1,m2,m3);
+    printf("Avg = %d",avg);
+}
+int marks_avg(int m1,int m2,int m3){
+    float avg = m1+m2+m3/3;
+    return avg;
+}
