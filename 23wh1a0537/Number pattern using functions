@@ -1,0 +1,18 @@
+/function to display number pattern
+#include<stdio.h>
+void num_pattern(int);
+int main(){
+  int n;
+  printf("enter the number of rows\n");
+  scanf("%d",&n);
+  num_pattern(n);
+}
+ void num_pattern(int n){
+    int i,j;
+    for(i=1;i<=n;i++){
+      for(j=1;j<=i;j++){
+         printf("%d",j);
+      }
+    printf("\n");
+    }
+ }
