@@ -1,0 +1,21 @@
+//find the gcd(greatest function divisor )of 2 numbers
+#include<stdio.h>
+int gcd(int,int);
+int main(){
+   int num1,num2,ans;
+   printf("enter two numbers\n");
+   scanf("%d %d",&num1,&num2);
+   ans=gcd(num1,num2);
+   printf("GCD of %d and %d is %d",num1,num2,ans);
+   return 0;
+}
+
+int gcd(int num1,int num2){
+   int i,result;
+   for(i=1;i<=num1 && i<=num2;i++){
+      if(num1%i==0 && num2%i==0){
+           result=i;
+      }
+   }
+return result;
+}
