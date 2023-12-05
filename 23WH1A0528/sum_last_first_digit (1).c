@@ -7,7 +7,7 @@ scanf("%d",&num);
 ld = num%10;
 printf("%d ",ld);
 for(;num>=10;){
-	num=num%10;
+	num=num/10;
 	}
 	fd=num;
 	sum=ld+fd;
