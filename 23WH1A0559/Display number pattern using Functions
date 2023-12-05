@@ -1,0 +1,17 @@
+// function to display number pattern
+#include <stdio.h>
+void display_number_pattern();
+int main()
+{
+    display_number_pattern();
+  return 0;
+}
+ void display_number_pattern(){
+     int i,j;
+     for(i=1;i<=4;i++){
+         for(j=1;j<=i;j++){
+             printf("%d",j);
+         }
+         printf("\n");
+     }
+ }
