@@ -1,0 +1,31 @@
+//to find prime number in a array using linear search in functions
+#include<stdio.h>
+int search_prime(int[],int);
+int main(){
+    int num[20],range;
+    printf("enter the range of array: ");
+    scanf("%d",&range);
+    printf("enter the elements of the array: ");
+    for(int i=0; i<range; i++)
+        scanf("%d",&num[i]);
+    int result=search_prime(num,range);
+    if(result>0 && result<=range)
+        printf("prime number is found at %d position.",result);
+    else
+        printf("prime number not found in th elements");
+return 0;
+}
+int search_prime(int arr[],int range){
+    for(int i=0; i<range; i++){
+        int count=0;
+            for(int j=1; j<=arr[i]; j++){
+                if(arr[i]%j==0)
+                    count++;
+            }
+        if(count==2){
+            return i+1;
+            break;
+        }
+    }
+    return range+1;
+}
