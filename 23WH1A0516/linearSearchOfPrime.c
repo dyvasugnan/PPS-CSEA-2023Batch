@@ -9,7 +9,7 @@ int main(){
 	for(i = 0; i < len; i++){
 		scanf("%d",&arr[i]);	
 	}
-	int index = linearSearch(arr,len);
+	int index = linearSearchOfPrime(arr,len);
 	if(index >= 0){
 	printf("%d is the index of prime number in the given array",index);
 	}
