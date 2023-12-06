@@ -1,0 +1,19 @@
+    int number, firstDigit, lastDigit;
+    
+    printf("Input number: ");
+    scanf("%d", &number);
+
+    lastDigit = number % 10; // Extracting the last digit
+
+  
+    for (; number > 0; number /= 10) {
+        firstDigit = number;
+    }
+    firstDigit = firstDigit / 10; 
+
+    int sum = firstDigit + lastDigit;
+    
+    printf("Sum of first and last digit: %d\n", sum);
+
+    return 0;
+}
