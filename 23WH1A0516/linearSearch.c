@@ -12,7 +12,7 @@ int main(){
 	printf("Enter key value : ");
 	scanf("%d",&key);
 	int index = linearSearch(arr,len,key);
-	if(index >= 1){
+	if(index >= 0){
 	printf("%d is the index of key value in the given array",index);
 	}
 	else{
@@ -28,5 +28,5 @@ int linearSearch(int arr[],int len,int key){
 			break;
 		}
 	}
-	return 0;
+	return -1;
 }
