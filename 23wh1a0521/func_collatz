@@ -1,0 +1,28 @@
+#include<stdio.h>
+int get_collatz(int);
+int main()
+{
+	int num,result;
+	printf("enter any number:");
+	scanf("%d",&num);
+	result = get_collatz(num);
+	printf("%4d",result);
+	return 0;
+
+}
+int get_collatz(int x)
+{
+	while(x!=1)
+	{
+		if(x%2==0)
+		{
+			x=x/2;
+		}
+		else
+		{
+			x=3*x+1;
+		}
+	printf("%4d",x);
+	}
+	return x;
+}
