@@ -1,0 +1,59 @@
+#include<stdio.h>
+void selection_sort(int[],int);
+int get_trucks(int[],int,int);
+int main(){
+    int godowns,capacity;
+    printf("no.of godowns:");
+    scanf("%d",&godowns);
+    int godown_weight[godowns];
+    for(int i=0;i<godowns;i++)
+        scanf("%d",&godown_weight[i]);
+    printf("enter max.capacity:");
+    scanf("%d",&capacity);
+    selection_sort(godown_weight,godowns);
+    int trucks=get_trucks(godown_weight,godowns,capacity);
+    printf("minimum no.of trucks required:%d",truck);
+}
+void selection_sort(int gw[],int g){
+    int i,j,min_index,temp;
+    for(i=0;i<g-1;i++){
+        min_index=i;
+        for(j=i+1;j<g;j++){
+            if(gw[i]>gw[j]){
+                min_index=j;
+             }
+        }
+        if(min_index!=0){
+            temp=gw[i];
+            gw[i]=gw[min_index];
+            gw[min_index]=gw[i];
+        }
+    }
+}
+int get_trucks(int gw[],int g,int load){
+    int count=0;
+    for(int i=g-1;i>=0;i--){
+        if(gw[i]==0)
+            continue;
+        else{
+            for(int j=i-1;j>=0;j--){
+                if(gw[j]==0)
+                    continue;
+                else if(gw[i]+gw[j]<=load){
+                    count++;
+                    gw[i]==0;
+                    gw[j]==0;
+                }
+                else if(j==0){
+                    count++;
+                    gw[i]==0;
+                }
+            }
+        }
+    }
+    return count;
+}
+
+
+
+
