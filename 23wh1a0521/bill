@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+int units;
+float bill,charge;
+printf("enter a units:");
+scanf("%d",&units);
+if (units<99){
+     bill=units*0.90;
+    if ((units*0.90)>100){
+     printf("bill:%.2f",bill);}
+     else 
+     printf("min bill is 100");
+     }
+else if (units>=100 && units<199){
+     bill=units*1.20;
+     printf("bill:%.2f",bill);}
+else if (units>=200 && units<399){
+     bill=units*1.60;
+     printf("bill:%.2f",bill);}
+else{
+     bill=units*2;
+     printf("bill:%.2f",bill);} 
+if (bill>600){
+    charge=(0.15*bill);
+    printf("extra charge for electricity bill:%.2f",charge);
+    float total=bill+charge;
+    printf("total electricity bill:%.2f",total);
+}
+return 0;
+}
