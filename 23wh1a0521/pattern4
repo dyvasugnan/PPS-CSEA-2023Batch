@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+int column=5,rows;
+printf("enter no.of rows:");
+scanf("%d",&rows);
+for(int i=1;i<=rows;i++){
+	for(int j=rows;j>i;j--){
+	printf("  ");}
+	for(int k=1;k<=i;k++){
+	printf(" * ");}
+printf("\n");
+}
+}
