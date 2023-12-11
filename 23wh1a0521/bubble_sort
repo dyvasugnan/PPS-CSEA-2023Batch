@@ -1,0 +1,35 @@
+#include<stdio.h>
+void print_array(int[],int);
+void bubble_sort(int[],int);
+void swap(int*,int*);
+int main(){
+	int size,i;
+	printf("enter size of array:");
+	scanf("%d",&size);
+	int a[size];
+	printf("enter elements into array:");
+	for(i=0;i<size;i++)
+		scanf("%d",&a[i]);
+	print_array(a,size);
+	bubble_sort(a,size);
+	print_array(a,size);
+}
+void print_array(int a[],int r){
+	int i;
+	for(int i=0;i<r;i++);
+		printf("%4d",a[i]);
+}
+void swap(int *a,int *b){
+	int temp=*a;
+	*a=*b;
+	*b=temp;
+}
+void bubble_sort(int a[],int r){
+	for(int i=0;i<r-1;i++){
+		for(int j=0;j<r-i-1;j++){
+			if(a[j]>a[j+1]){
+				swap(&a[j],&a[j+1]);
+			}
+		}
+	}	
+}
