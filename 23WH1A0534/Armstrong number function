@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdbool.h>
+bool armstrong(int);
+int main()
+{
+    int n;
+    printf("Enter a number \n");
+    scanf("%d",&n);
+    bool check = armstrong(n);
+    printf("%d",check);
+}
+bool armstrong(int n)
+{
+    int rem,sum=0;
+    int on=n;
+    while(n!=0)
+    {
+        rem=n%10;
+        sum += rem*rem*rem;
+        n=n/10;
+    }
+    if(sum==on)
+    {
+        return true;
+    }
+    else
+    {
+       return false;
+    }
+}
