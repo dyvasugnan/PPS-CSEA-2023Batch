@@ -1,0 +1,47 @@
+// adding of two matrices using functions 
+#include <stdio.h>
+void readArray(int,int,int [][100]);
+void printArray (int,int,int[][100]);
+void sumOfArray(int,int,int [][100],int,int,int [][100]);
+
+int main() {
+    int r1,c1,r2,c2,arr1[100][100],arr2[100][100];
+    printf("enter rows,columns of first matrix and enter rows and columns of second matrix: \n ");
+    scanf("%d %d %d %d",&r1,&c1,&r2,&c2);
+    readArray(r1,c1,arr1);
+    printf("elements of first matrix:\n");
+    printArray(r1,c1,arr1);
+    readArray (r2,c2,arr2);
+    printf("\n");
+    printf("elements of second matrix: \n");
+    printArray (r2,c2,arr2);
+    printf("\n");
+    printf("sum of both the matrices is:\n");
+    sumOfArray(r1,c1,arr1,r2,c2,arr2);
+    return 0;
+}
+void readArray(int r,int c,int arr[r][c]){
+    printf("enter %d values\n",r*c);
+    for (int i=0;i<r;i++){
+        for (int j=0;j<c;j++)
+            scanf("%d",&arr[i][j]);
+    }
+}
+
+void printArray (int r,int c,int arr[r][c]){
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            printf("%4d",arr[i][j]);
+        }
+    printf("\n");
+    }
+}
+
+void sumOfArray(int r1,int c1,int arr1[r1][c1],int r2,int c2,int arr2[r2][c2]){
+    for (int i=0;i<r1;i++){
+        for(int j=0;j<c1;j++){
+            printf("%4d",arr1[i][j]+arr2[i][j]);
+        }
+    printf("\n");
+    }
+}
