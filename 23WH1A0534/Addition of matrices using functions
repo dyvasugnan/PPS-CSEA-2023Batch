@@ -1,0 +1,61 @@
+#include <stdio.h>
+void printMatrix(int r , int c ,int a[r][c])
+{
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++) 
+        {
+            printf("%3d", a[i][j]);
+        }
+        printf("\n");
+    }
+}
+int main() 
+{
+    int i, j, r1, c1, r2, c2;
+    printf("Enter the order of the 1st matrix \n");
+    scanf("%d %d", &r1, &c1);
+    int a[r1][c1];
+    printf("Enter the elements of 1st matrix \n");
+    for (i = 0; i < r1; i++)
+    {
+        for (j = 0; j < c1; j++) 
+        {
+            scanf("%d", &a[i][j]);
+           }
+    }
+    printf("Enter the order of the 2nd matrix \n");
+    scanf("%d %d", &r2, &c2);
+    int b[r2][c2];
+    printf("Enter the elements of 2nd matrix  \n");
+    for (i = 0; i < r2; i++)
+    {
+        for (j = 0; j < c2; j++) 
+        {
+            scanf("%d", &b[i][j]);
+        }
+    }
+    printf("Size of 1st MATRIX is %dx%d \n",r1,c1);
+    printf("1st MATRIX is \n");
+    printMatrix(r1,c1,a);
+    printf("Size of 2nd MATRIX is %dx%d \n",r2,c2);
+    printf("2nd MATRIX is \n");
+    printMatrix(r2,c2,b);
+    
+    if(r1==r2 & c1 == c2)
+    {
+        printf("Addition of two Matrices = \n");
+        int result[r1][c1];
+        for (i = 0; i < r1; i++)
+        {
+            for (j = 0; j < c1; j++) 
+            {
+                result[i][j] = a[i][j] + b[i][j];
+            }
+        }
+        printMatrix(r1,c1,result);
+    }
+}
+
+    
+
