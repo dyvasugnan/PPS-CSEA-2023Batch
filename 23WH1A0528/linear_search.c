@@ -20,10 +20,8 @@ bool result=linear_search(arr,range,key);
 return 0;
 }
 bool linear_search(int arr[],int range,int key){
-	for(int i=0; i<=range; i++){
+	for(int i=0; i<range; i++){
 		if (arr[i]==key)
 			return 1;
-		else
-			return 0;
 	}
 }
