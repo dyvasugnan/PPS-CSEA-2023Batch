@@ -1,0 +1,20 @@
+//gcd using reccursion
+#include <stdio.h> 
+int gcd(int,int,int); 
+int main(){     
+    int x,y;    
+    printf("enter two numbers \n");   
+    scanf("%d %d",&x,&y);   
+    int ans;  
+    if(x>y)   
+         ans=gcd(x,y,y); 
+    else   
+         ans= gcd(x,y,x);  
+    printf("gcd of %d and %d is %d",x,y,ans); }   
+int gcd(int x,int y,int n){    
+     if(n==0)        
+         return n;    
+     if(x%n ==0 &&y%n==0)     
+         return n;     
+     return gcd(x,y,--n);
+}       
