@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include<stdbool.h>
+bool binary_search(int[],int, int, int);
+int main() {
+   int len;
+   bool result;
+   printf("enter range of array");
+   scanf("%d",&len);
+   int arr[len],key,i;
+   printf("enter elements in array");
+   for(i=0;i<len;i++){
+       scanf("%d",&arr[i]);
+   }
+   printf("enter key value ");
+   scanf("%d",&key);
+   result = binary_search(arr,key,0,len-1);
+   if(result==1)
+        printf("element is found");
+    else
+        printf("element is not found");
+}
+bool binary_search(int arr[],int key,int low, int high){
+    int mid;
+    while(low<=high){
+        mid=(low+high)/2;
+        if(arr[mid]==key)
+            return 1;
+        if(arr[mid]<key)
+            low=mid+1;
+        else
+            high=mid-1;
+    }
+    return 0;
+}
