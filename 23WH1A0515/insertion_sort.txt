@@ -1,0 +1,33 @@
+#include <stdio.h>
+void insertion_sort(int[],int);
+void print_array(int[],int);
+int main() {
+    int len;
+    printf("enter the range of array");
+    scanf("%d",&len);
+    int arr[len],i;
+    printf("enter elements into array");
+    for(i=0;i<len;i++)
+        scanf("%d",&arr[i]);
+    print_array(arr,len);
+    insertion_sort(arr,len);
+    printf("\n");
+    print_array(arr,len);
+}
+void insertion_sort(int arr[],int len){
+   int i,j,key;
+   for(i=1;i<len;i++){
+       key = arr[i];
+       j = i-1;
+       while(key < arr[i] && j>=0){
+           arr[j+1] = arr[j];
+           j--;
+       }
+       arr[j+1] = key;
+   }
+}
+void print_array(int arr[],int len){
+    for(int i=0;i<len;i++){
+        printf("%4d",arr[i]);
+    }
+}
