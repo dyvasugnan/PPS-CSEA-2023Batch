@@ -1,0 +1,12 @@
+#include<stdio.h>
+int get_gcd(int,int,int);
+void main(){
+	int num1,num2,gcd;
+	printf("enter any two numbers: ");
+	scanf("%d%d",&num1,&num2);
+	gcd=(num1>num2)?get_gcd(num1,num2,num2):get_gcd(num1,num2,num1);
+	printf("gcd of %d and %d is %d",num1,num2,gcd);
+}
+int get_gcd(int a,int b,int i){
+	return (a%i==0 && b%i==0)?i:get_gcd(a,b,i-1);
+}
