@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+    int point;
+    scanf("%d",&point);
+    if(point>=12)
+        printf("yes");
+    else
+        printf("No");
+}
