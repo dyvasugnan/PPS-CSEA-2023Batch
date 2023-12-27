@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main() {
+    int day;
+    scanf("%d", &day);
+    if (day == 25){
+        printf("CHRISTMAS\n");
+    } 
+    else{
+        printf("ORDINARY\n");
+    }
+    return 0;
+}
