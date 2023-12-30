@@ -1,0 +1,19 @@
+//i) Arithmetic Operators (+,-,*,/,%)
+#include<stdio.h>
+int main()
+{
+int a,b;
+printf(“Enter a,b values:”);
+scanf(“%d%d”,&a,&b);
+int sum = a+b;
+printf(“ Sum is %d”,sum);
+int diff = a-b;
+printf(“ Subtraction is % d”,diff);
+int mul = a*b;
+printf(“ Multiplication is %d ”,mul);
+int divi =a/b;
+printf(“ Division is %d ”,divi);
+int mod = a%b;
+printf(“ Mod is %d ”,mod);
+return 0;
+}
