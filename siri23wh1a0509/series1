@@ -5,7 +5,7 @@ int main(){
 int num,i,n,res;
   printf("enter a number:");
   scanf("%d",&num);
-  print("enter n value:");
+  printf("enter n value:");
   scanf("%d",&n);
 int result = series(num,i,n,res);
   printf("Result is%d",res);
