@@ -1,0 +1,26 @@
+//e. Write a program that shows the binary equivalent of a given positive number between 0 to 255
+
+#include<stdio.h>
+int main()
+{
+int num, i;
+int binary_num[8]={0};
+printf(“enter a positive number between 0 and 255 : “);
+scanf(“%d”,&num);
+if(num<0||num>255)
+{
+printf(“invalid input”);
+return 0;
+}
+i=0;
+while(num>0&&i<8)
+{
+Binary_num[i]=num%2;
+num/=2;
+i++;
+}
+printf(“the binary equivalent of %d is : “,num);
+for(i=7;i>=0;i--)
+printf(“%d”,binary_num[i]);
+return 0 ;
+}
