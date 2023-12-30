@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<math.h>
+int series(int,int,int,int);
+int main(){
+int num,i,n,res;
+  printf("enter a number:");
+  scanf("%d",&num);
+  print("enter n value:");
+  scanf("%d",&n);
+int result = series(num,i,n,res);
+  printf("Result is%d",res);
+}
+int series (int num,int i, int n,int res){
+  res = 1;
+  for(i=1;i<=num;i++){
+  res += pow(num,i);
+  }
+return res;
+}
