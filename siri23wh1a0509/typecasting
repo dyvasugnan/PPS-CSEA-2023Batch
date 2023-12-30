@@ -1,0 +1,14 @@
+\\Write a simple program that converts one given data type to another using auto conversion and casting. Take the values form standard input.
+#include<stdio.h>
+void main()
+{
+int i = 95 ;
+float x = 90.99 ;
+char ch = 'A' ;
+i = x ;
+printf("i value is %d\n",i);
+x = i ;
+printf("x value is %f\n",x);
+i = ch ;
+printf("i value is %d\n",i);
+}
