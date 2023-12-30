@@ -1,0 +1,12 @@
+//a. A building has10 floors with a floor heigh to f 3meters each.A ball I sdropped from the top of the building. Find the time taken by the ball to reach each floor. (Use the formula s = ut+(1/2)at^2 where u and a are the initial velocity in m/sec (= 0) and acceleration in m/sec^2 (= 9.8 m/s^2)).
+include<stdio.h>
+int main()
+{
+int s,r,t,u=0;
+float a=9.8;
+printf(“enter s value :”);
+r = 2*s/a;
+t = sqrt(r);
+printf(“the time taken is %d : “,t);
+return 0;
+}
