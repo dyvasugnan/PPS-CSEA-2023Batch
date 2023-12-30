@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+int per,a,b;
+printf(“\nEnter Percentage”);
+scanf(“%d”, &per);
+printf(“\n Enter a, b values”);
+scanf(“%d%d”,&a,&b);
+if(per>=60&&per<70){
+printf(“\n First class”);
+  }
+else
+printf(“\nNot First Class”);
+if(a==b){
+printf(“\na nad b are equal”);
+  }
+else
+printf(“\na and b not equal");
+return 0;
+}
