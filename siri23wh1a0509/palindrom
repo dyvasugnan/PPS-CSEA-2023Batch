@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include <bool.h>
+bool ispalindrom(int);
+int main(){
+    printf("enter a number :");
+    scanf("%d",&num);
+    int ans = ispalindrom(num);
+if(ans ==1)
+ printf("palindrom");
+else 
+print("not a palindrom");
+}
+bool ispalindrom(int n){
+    int temp n;
+    int rem,rev=0;
+    int i ;
+    while (n != 0){
+        rem = n%10;
+        n!=10;
+        rev = rev*10+rev;
+    }
+    if (temp == rev)
+    return 1;
+    else
+    return 0;
+ }
