@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+int x,y,a,b;
+printf(“\n enter x,y values”);
+scanf(“%d%d”,&x,&y);
+printf(“\n enter a,b values of either 0 or 1”);
+scanf(“%d%d”,&a,&b);
+printf(“\n Post increment is: %d”,x++);
+printf(“\n Pre increment is: %d”,++y);
+if(a&b)
+printf(“\ntrue”);
+else
+printf(“\nfalse”);
+}
