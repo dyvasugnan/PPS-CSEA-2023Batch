@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+void deletechar(char*,int,int);
+int main(){
+    char string[300];
+    int pos,n;
+    printf("enter the string");
+    scanf("%s",string);
+    printf("enter the pos and n");
+    scanf("%d%d",&pos,&n);
+    deletechar(string,pos,n);
+    printf("%s",string);
+}
+void deletechar(char*string,int pos,int n){
+    int len=strlen(string);
+    if(pos<0|| pos>=len){
+        printf("invalid");
+    }
+    for(int i=pos;i<len-n+1;i++){
+        string[i]=string[i+n];
+        
+    }
+    string[len-n]='\0';
+    
+}
