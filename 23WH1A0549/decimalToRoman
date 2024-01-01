@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void decimalToRoman(int number) {
+    if (number < 1 || number > 50) {
+        printf("Input out of range (1 to 50).\n");
+        return;
+    }
+
+    int values[] = {1, 4, 5, 9, 10, 40, 50};
+    char* numerals[] = {"I", "IV", "V", "IX", "X", "XL", "L"};
+
+    printf("Roman numeral equivalent: ");
+
+    for (int i = 6; i >= 0; i--) {
+        while (number >= values[i]) {
+            printf("%s", numerals[i]);
+            number -= values[i];
+        }
+    }
+
+    printf("\n");
+}
+
+int main() {
+    int decimalNumber;
+
+    printf("Enter a decimal number (1 to 50): ");
+    scanf("%d", &decimalNumber);
+
+    decimalToRoman(decimalNumber);
+
+    return 0;
+}
