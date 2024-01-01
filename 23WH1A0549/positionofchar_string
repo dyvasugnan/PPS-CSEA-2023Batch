@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int position(char*,char*);
+int main(){
+    char str[300],targetchar;
+    printf("enter the string");
+    scanf("%s",str);
+    printf("enterthe char to find");
+    scanf("%c",&targetchar);
+    int res=position(str,targetchar);
+    printf("%d",res);
+}
+int position(char*str,char*targetchar){
+    int len=strlen(str);
+    for(int i=0;i<len;i++){
+        if(str[i]==targetchar){
+            return i;
+        }
+    }
+    return -1;
+}
