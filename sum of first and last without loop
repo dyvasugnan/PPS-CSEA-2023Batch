@@ -1,0 +1,14 @@
+#include<stdio.h>
+    int main() {
+    int number, last_Digit, first_Digit, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    last_Digit = number % 10;
+    first_Digit = number;
+    while (first_Digit >= 10) {
+        first_Digit /= 10;
+    }
+    sum = first_Digit + last_Digit;
+    printf(" sum of first and lastDigit%d",sum);
+     return 0;
+     }
