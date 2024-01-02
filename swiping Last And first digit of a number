@@ -1,0 +1,21 @@
+#include<stdio.h>
+    intmain() {
+  int num, originalNum, firstDigit, lastDigit, temp, reverse_Num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    originalNum = num;
+    lastDigit = num % 10;
+    while (num >= 10) {
+        num /= 10;
+    }
+    firstDigit = num;
+    temp = firstDigit;
+    firstDigit = lastDigit;
+    lastDigit = temp;
+    reverse_Num = lastDigit;
+    while (originalNum >= 10) {
+        originalNum /= 10;
+        reverse_Num = reverse_Num * 10 + originalNum % 10;
+    }
+    return 0;
+    }
