@@ -1,4 +1,4 @@
-//To find whether the matrices are qual or not
+//To find whether the matrices are equal or not
 #include <stdio.h>
 int main() {
     int row, col;
