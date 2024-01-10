@@ -1,0 +1,39 @@
+//This program is to encrypt and depcryt a message.
+
+#include <stdio.h>
+#include <string.h>
+
+void encrypt(char *input, char *output, int key) {
+    for (int i = 0; input[i] != '\0'; ++i) {
+        if (input[i] >= 'A' && input[i] <= 'Z') {
+            output[i] = (input[i] + key - 'A') % 26 + 'A';
+        } else if (input[i] >= 'a' && input[i] <= 'z') {
+            output[i] = (input[i] + key - 'a') % 26 + 'a';
+        } else {
+            output[i] = input[i];  // Leave non-alphabetic characters unchanged
+        }
+    }
+    output[strlen(input)] = '\0';
+}
+
+void decrypt(char *input, char *output, int key) {
+    encrypt(input, output, 26 - key);  // Decryption is just encryption with the opposite key
+}
+
+int main() {
+    char message[] = "Hello, this is a secret message!";
+    int key = 3;  // Key for Caesar cipher
+
+    char encrypted[100];
+    char decrypted[100];
+
+    // Encryption
+    encrypt(message, encrypted, key);
+    printf("Encrypted message: %s\n", encrypted);
+
+    // Decryption
+    decrypt(encrypted, decrypted, key);
+    printf("Decrypted message: %s\n", decrypted);
+
+    return 0;
+}
