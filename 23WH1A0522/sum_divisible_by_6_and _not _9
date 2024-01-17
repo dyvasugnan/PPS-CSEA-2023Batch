@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool is_divisible_6(int);
+bool is_not_divisible_9(int);
+bool is_divisible_by_6_and_not_9(int);
+int sum_divisible_by_6_and_not_9(int);
+int main()
+{
+    int number;
+    printf("enter a number: ");
+    scanf("%d",&number);
+    int sum = sum_divisible_by_6_and_not_9(number);
+    printf("%d",sum);
+    return 0;
+}
+bool is_divisible_6(int num){
+    if(num%6==0)
+        return 1;
+    else
+        return 0;
+}
+bool is_not_divisible_9(int num){
+    if(num%9!=0)
+        return 1;
+    else
+        return 0;
+}
+bool is_divisible_by_6_and_not_9(int num){
+    if(is_divisible_6(num)&&is_not_divisible_9(num)==1)
+        return 1;
+    else
+        return 0;
+}
+int sum_divisible_by_6_and_not_9(int num){
+    int sum=0;
+    for(int i=1;i<=num;i++){
+        if(is_divisible_by_6_and_not_9(i)==1)
+                sum=sum+i;
+    }
+    return sum;
+}
