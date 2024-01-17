@@ -1,0 +1,35 @@
+//binary search
+#include<stdio.h>
+#include<stdbool.h>
+bool binary_search(int[],int,int,int);
+void main(){
+    int size;
+    printf("enter the range of numbers: ");
+    scanf("%d",&size);
+    int num[size];
+    printf("enter %d numbers:",size);
+    for(int i=0;i<size;i++){
+        scanf("%d",&num[i]);
+    }
+    int key;
+    printf("enter the number to search: ");
+    scanf("%d",&key);
+    bool res=binary_search(num,key,0,size-1);
+    if(res==1)
+        printf("%d is found",key);
+    else
+        printf("%d is not found",key);
+}
+bool binary_search(int a[],int k,int l,int h){
+    int m;
+    while(l<=h){
+        m=(l+h)/2;
+        if(a[m]==k)
+            return 1;
+        if(a[m]<k)
+            l=m+1;
+        else
+            l=m-1;
+    }
+    return 0;
+}
