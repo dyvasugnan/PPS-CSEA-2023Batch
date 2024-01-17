@@ -1,0 +1,18 @@
+//power of a number
+#include<stdio.h>
+int get_power(int,int);
+void main(){
+    int base,power,num;
+    printf("enter number: ");
+    scanf("%d",&base);
+    printf("enter the power: ");
+    scanf("%d",&power);
+    num=get_power(base,power);
+    printf("%d^%d=%d",base,power,num);
+    
+}
+int get_power(int b,int p){
+    if(p==1)
+        return b;
+    return b*get_power(b,p-1);
+}
