@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n,i ;
+    printf("enter the size of array :");
+    scanf("%d",&n);
+     int array[n], sumo =0 ,sume = 0;
+   printf("Enter the array elements : ");
+   for(i=0;i<n;i++){
+       scanf("%d",&array[i]);
+   }
+   for (i=0;i< n;i++){
+   if( i%2==0){
+     sume += array[i];
+   }
+   else {
+     sumo += array[i];
+   }
+   }
+   printf("sum of even numbers:%d \n",sume);
+   printf("sum of odd numbers:%d \n",sumo);
+   
+  return 0 ;
+}
