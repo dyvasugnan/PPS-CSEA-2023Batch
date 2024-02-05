@@ -1,0 +1,23 @@
+// program to add the sum of the digits in even places,odd places and display
+#include <stdio.h>
+
+int main() {
+    int digits;
+    printf("enter the digits\n");
+    scanf("%d",&digits);
+    int num,oddsum=0,evensum=0;
+    printf("enter the number\n");
+    scanf("%d",&num);
+    while (digits>=0){
+        if (digits%2!=0)
+            oddsum+=num%10;
+        else
+            evensum+=num%10;
+        num=num/10;
+        digits--;
+        
+    }
+    printf("even places sum=%d\nodd places sum=%d",evensum,oddsum);
+
+    return 0;
+}
