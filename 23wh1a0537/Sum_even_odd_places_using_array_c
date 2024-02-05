@@ -1,0 +1,22 @@
+// sum of even and odd places using array
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("enter maximum value\n");
+    scanf("%d",&n);
+    int arr[n],evensum=0,oddsum=0;
+    printf("enter %d values\n ",n);
+    for(int i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    for (int i=0;i<n;i++){
+        if(i%2==0){
+            evensum+=arr[i];
+        }
+        else
+            oddsum+=arr[i];
+     }
+    printf("evenplaces sum=%d\nodd places sum=%d",evensum,oddsum);
+
+    return 0;
+}
