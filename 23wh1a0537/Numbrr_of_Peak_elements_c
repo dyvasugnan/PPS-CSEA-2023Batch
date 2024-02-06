@@ -1,0 +1,31 @@
+//to find the number of peak elements(ex: 1,6,3 6 is peak element as 1 and 3 are less than 6)
+#include <stdio.h>
+int peakElement(int [],int);
+int main() {
+    int n;
+    printf("enter max range of array\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("enter %d elements",n);
+    for(int i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    int result=peakElement(arr,n);
+    printf("peak elements=%d",result);
+    return 0;
+}
+
+int peakElement(int arr[],int n){
+    int count=0;
+    if(arr[0]>arr[1]){
+        count++;
+    }
+    if(arr[n-1]>arr[n-2]){
+        count++;
+    }
+    for(int i=1;i<n-1;i++){
+        if(arr[i-1]<arr[i] && arr[i+1]<arr[i]){
+            count++;
+        }
+    }
+    return count;
+}
