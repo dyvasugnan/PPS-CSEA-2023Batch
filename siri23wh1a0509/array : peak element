@@ -1,0 +1,23 @@
+// peak element in an array (greater than neighbour elements)
+#include <stdio.h>
+int main()
+{
+    int n,i;
+    printf("enter the size of array :");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter the array elements:");
+    for (i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for (i=0;i<n;i++){
+    if (a[i-1] < a[i] && a[i+1] < a[i]){
+        scanf("%d",&a[i]);
+        break;
+    }
+    }
+    printf("the peak elements in the array is :%d",a[i]);
+    
+    return 0;
+}
+    
