@@ -1,1 +1,17 @@
 
+package java_517;
+
+public class prog1 {
+	int mobilNum=733077;
+	static String classRoomNumber="DB304";
+public static void main(String[] args) {
+		prog1 object1=new prog1();
+		prog1 object2=new prog1();
+		object1.classRoomNumber="newStone304";
+		System.out.println(object1.classRoomNumber);
+		System.out.println(object2.classRoomNumber);
+	
+	}
+
+
+}
