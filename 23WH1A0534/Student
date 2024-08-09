@@ -1,0 +1,12 @@
+package Practice;
+
+public class Student {
+	static int student_mobile_num = 1234567809; 
+	public static void main(String args[]) {
+		print(student_mobile_num);
+	}
+	public static void print(int num) {
+		System.out.println(num);
+	}
+}
+ 
